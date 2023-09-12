@@ -32,7 +32,21 @@ extension UIView {
         trailingAnchor.constraint(equalTo: anchor, constant: padding).isActive = true
         return self
     }
+    
+    @discardableResult
+    func centerY(to anchor: NSLayoutYAxisAnchor, padding: CGFloat = 0) -> UIView {
+        translatesAutoresizingMaskIntoConstraints = false
+        centerYAnchor.constraint(equalTo: anchor, constant: padding).isActive = true
+        return self
+    }
 
+    @discardableResult
+    func centerX(to anchor: NSLayoutXAxisAnchor, padding: CGFloat = 0) -> UIView {
+        translatesAutoresizingMaskIntoConstraints = false
+        centerXAnchor.constraint(equalTo: anchor, constant: padding).isActive = true
+        return self
+    }
+ 
     @discardableResult
     func height(_ height: CGFloat) -> UIView {
         translatesAutoresizingMaskIntoConstraints = false
